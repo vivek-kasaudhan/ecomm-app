@@ -38,10 +38,7 @@ const Homepage = () => {
     }
   }
 
-  useEffect(() => {
-    if (page === 1) return;
-    loadMore();
-  }, [page]);
+ 
   //load more
   const loadMore = async () => {
     try {
@@ -54,6 +51,10 @@ const Homepage = () => {
       setLoading(false);
     }
   };
+   useEffect(() => {
+    if (page === 1) return;
+    loadMore();
+  }, [page]);
 
 
 
